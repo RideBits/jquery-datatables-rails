@@ -13,7 +13,7 @@ module Jquery
           js_strings = js_assets_map[style.to_sym].join
 
           insert_into_file js_manifest, js_strings, :after => "jquery_ujs\n" if File.exist?(js_manifest)
-          insert_css_strings(css_manifest) if File.exists?(css_manifest)
+          insert_css_strings(css_manifest) if File.exist?(css_manifest)
         end
 
         private
